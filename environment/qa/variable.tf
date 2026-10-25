@@ -28,15 +28,15 @@ variable "default_node_pool" {
 
   }))
 }
-variable "environment" {
-  type    = string
-  default = "Project"
-}
+# variable "environment" {
+#   type    = string
+#   default = "Project"
+# }
 
-variable "project_name" {
-  type    = string
-  default = "akd_project"
-}
+# variable "project_name" {
+#   type    = string
+#   default = "akd_project"
+# }
 
 
 variable "azure_acr" {
