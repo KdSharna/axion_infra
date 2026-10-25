@@ -21,19 +21,19 @@ module "azure_acr" {
   georeplications = var.georeplications
 }
 
-# module "serversql" {
-#   source     = "../../module/azure_sql_server"
-#   depends_on = [module.name_rg]
+module "serversql" {
+  source     = "../../module/azure_sql_server"
+  depends_on = [module.name_rg]
 
-#   sqlserver = var.serversql
-# }
+  sqlserver = var.serversql
+}
 
-# module "databasesql" {
-#   source     = "../../module/azure_sql_database"
-#   depends_on = [module.serversql]
+module "databasesql" {
+  source     = "../../module/azure_sql_database"
+  depends_on = [module.serversql]
 
-#   sqldatabase = var.databasesql
-# }
+  sqldatabase = var.databasesql
+}
 
 
 # resource "azurerm_role_assignment" "aks_acr" {
